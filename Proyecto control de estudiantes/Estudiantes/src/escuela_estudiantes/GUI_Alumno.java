@@ -20,7 +20,7 @@ public class GUI_Alumno extends javax.swing.JInternalFrame {
         jButton_registrar = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jTextField_dni = new javax.swing.JTextField();
-        jTextField_documento = new javax.swing.JTextField();
+        jTextField_ref_alumno = new javax.swing.JTextField();
         jTextField_nombres = new javax.swing.JTextField();
         jTextField_apellidos = new javax.swing.JTextField();
         jComboBox_sexo = new javax.swing.JComboBox();
@@ -63,9 +63,9 @@ public class GUI_Alumno extends javax.swing.JInternalFrame {
             }
         });
 
-        jTextField_documento.addActionListener(new java.awt.event.ActionListener() {
+        jTextField_ref_alumno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField_documentoActionPerformed(evt);
+                jTextField_ref_alumnoActionPerformed(evt);
             }
         });
 
@@ -99,7 +99,7 @@ public class GUI_Alumno extends javax.swing.JInternalFrame {
         jLabel1.setText("DNI");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Documento");
+        jLabel2.setText("Ref.");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Nombres");
@@ -130,7 +130,7 @@ public class GUI_Alumno extends javax.swing.JInternalFrame {
                         .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jTextField_documento, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField_ref_alumno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -145,7 +145,7 @@ public class GUI_Alumno extends javax.swing.JInternalFrame {
                         .addComponent(jButton_nuevoreg)
                         .addGap(28, 28, 28)
                         .addComponent(jButton_registrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(jButton3)))
                 .addGap(22, 22, 22))
         );
@@ -168,7 +168,7 @@ public class GUI_Alumno extends javax.swing.JInternalFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField_documento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_ref_alumno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -195,7 +195,7 @@ public class GUI_Alumno extends javax.swing.JInternalFrame {
 public void limpiar()
     {
        jTextField_dni.setText("");
-       jTextField_documento.setText("");
+       jTextField_ref_alumno.setText("");
        jTextField_nombres.setText("");
        jTextField_apellidos.setText("");
        
@@ -205,7 +205,7 @@ public void limpiar()
     public void  bloquear_cajas()
     {
        jTextField_dni.setEnabled(false);
-       jTextField_documento.setEnabled(false);
+       jTextField_ref_alumno.setEnabled(false);
        jTextField_nombres.setEnabled(false);
        jTextField_apellidos.setEnabled(false);            
        jComboBox_sexo.setEnabled(false); 
@@ -218,7 +218,7 @@ public void limpiar()
     public void  desbloquear()
     {
        jTextField_dni.setEnabled(true);
-       jTextField_documento.setEnabled(true);
+       jTextField_ref_alumno.setEnabled(true);
        jTextField_nombres.setEnabled(true);
        jTextField_apellidos.setEnabled(true);
        jComboBox_sexo.setEnabled(true);       
@@ -240,7 +240,7 @@ public void limpiar()
         nom = jTextField_nombres.getText();
         ape = jTextField_apellidos.getText();              
         sex = jComboBox_sexo.getSelectedItem().toString();
-        doc = jTextField_documento.getText();
+        doc = jTextField_ref_alumno.getText();
         control_estudiantes est = new control_estudiantes();
         if(!doc.equals("") && !tipo.equals("") && !nom.equals("") && !ape.equals("")  && !sex.equals("")&& !carnet.equals(""))
         {
@@ -274,9 +274,9 @@ public void limpiar()
     jTextField_dni.transferFocus();        // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_dniActionPerformed
 
-    private void jTextField_documentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_documentoActionPerformed
-    jTextField_documento.transferFocus();        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField_documentoActionPerformed
+    private void jTextField_ref_alumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_ref_alumnoActionPerformed
+    jTextField_ref_alumno.transferFocus();        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField_ref_alumnoActionPerformed
 
     private void jComboBox_tipodocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox_tipodocActionPerformed
     jComboBox_tipodoc.transferFocus();        // TODO add your handling code here:
@@ -308,7 +308,7 @@ public void limpiar()
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField_apellidos;
     private javax.swing.JTextField jTextField_dni;
-    private javax.swing.JTextField jTextField_documento;
     private javax.swing.JTextField jTextField_nombres;
+    private javax.swing.JTextField jTextField_ref_alumno;
     // End of variables declaration//GEN-END:variables
 }
