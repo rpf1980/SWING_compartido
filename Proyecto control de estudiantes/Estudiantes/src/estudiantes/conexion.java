@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package estudiantes;
 
 import java.sql.Connection;
@@ -9,10 +6,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- *
- * @author ANDRES
- */
 public class conexion {
     
     private final String url = "jdbc:mysql://localhost/estudiantes";
@@ -39,10 +32,7 @@ public class conexion {
           System.out.println(e);
          }
     }
-     /**
-     *
-     * @return
-     */
+
     public Connection conectado(){
       return con;
 }
