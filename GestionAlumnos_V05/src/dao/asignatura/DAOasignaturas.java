@@ -36,7 +36,6 @@ public class DAOasignaturas implements IDAOasignaturas
         this.listaAsignaturas.add(new Asignatura("Tecnología", "1º ESO"));
         
         //2ºESO
-        this.listaAsignaturas = new ArrayList<Asignatura>();
         this.listaAsignaturas.add(new Asignatura("Biología y Geología", "2º ESO"));
         this.listaAsignaturas.add(new Asignatura("Geografía e Historia", "2º ESO"));
         this.listaAsignaturas.add(new Asignatura("Lengua Castellana y Literatura", "2º ESO"));
@@ -48,7 +47,6 @@ public class DAOasignaturas implements IDAOasignaturas
         this.listaAsignaturas.add(new Asignatura("Tecnología", "2º ESO"));
         
         //3ºESO
-        this.listaAsignaturas = new ArrayList<Asignatura>();
         this.listaAsignaturas.add(new Asignatura("Biología y Geología", "3º ESO"));
         this.listaAsignaturas.add(new Asignatura("Física y Química", "3º ESO"));
         this.listaAsignaturas.add(new Asignatura("Geografía e Historia", "3º ESO"));
@@ -60,7 +58,6 @@ public class DAOasignaturas implements IDAOasignaturas
         this.listaAsignaturas.add(new Asignatura("Tecnología", "3º ESO"));
         
         //BACHILLERATO
-        this.listaAsignaturas = new ArrayList<Asignatura>();
         this.listaAsignaturas.add(new Asignatura("Humanidades y Ciencias Sociales", "BACHILLERATO"));
         this.listaAsignaturas.add(new Asignatura("Filosofía Lengua Castellana y Literatura", "BACHILLERATO"));
         this.listaAsignaturas.add(new Asignatura("Primera Lengua Extranjera", "BACHILLERATO"));
