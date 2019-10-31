@@ -29,7 +29,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jDesktopPane1.setBorder(new javax.swing.border.MatteBorder(null));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setText("Estudiantes");
+        jButton1.setText("ALUMNO");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -39,7 +39,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton1.setBounds(130, 70, 150, 70);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton2.setText("Materias");
+        jButton2.setText("ASIGNATURAS");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -49,7 +49,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton2.setBounds(470, 70, 150, 70);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton3.setText("Matricula materias");
+        jButton3.setText("MATRÍCULA");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -59,7 +59,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton3.setBounds(130, 190, 150, 70);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton4.setText("Notas");
+        jButton4.setText("CALIFICACIONES");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -72,11 +72,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -99,7 +99,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-    String est = JOptionPane.showInputDialog(this,"Ingrese el No de carnet del estudiante: ",JOptionPane.OK_OPTION);
+    String est = JOptionPane.showInputDialog(this,"Nº DNI: ",JOptionPane.OK_OPTION);
        if(ctr.existe_estudiante(est))
        {
         GUI_Matricula matric = new GUI_Matricula(ctr);
@@ -109,7 +109,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
        else
        {
               
-          JOptionPane.showMessageDialog(null,"El estudiante no existe, debe registrarlo","Mensaje",JOptionPane.QUESTION_MESSAGE);  
+          JOptionPane.showMessageDialog(null,"El alumno no existe, debe registrarlo","Mensaje",JOptionPane.QUESTION_MESSAGE);  
        }
        
     }//GEN-LAST:event_jButton3ActionPerformed

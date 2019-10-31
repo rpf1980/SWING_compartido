@@ -29,7 +29,7 @@ public class GUI_Nota extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel1.setText("No carnet");
+        jLabel1.setText("DNI");
 
         jButton1.setText("Buscar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +136,7 @@ public class GUI_Nota extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String[] columnas = {"No carnet","Codigo","Materia"};
+        String[] columnas = {"DNI","CODIGO","ASIGNATURA"};
         datostabla = cont.consulta_asignatura_notas(jTextField_est.getText());
         DefaultTableModel datostcli = new DefaultTableModel(datostabla,columnas);
         jTable1.setModel(datostcli);
@@ -157,7 +157,7 @@ public class GUI_Nota extends javax.swing.JInternalFrame {
         {
         if(cont.insertar_notas(doc, mate, nota))
         {
-        JOptionPane.showMessageDialog(null,"Se registro la nota con exito ","Mensaje",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Nota registrada ","Mensaje",JOptionPane.INFORMATION_MESSAGE);
         jTextField_codigo.setText("");
         jTextField_nota.setText("");        
         }

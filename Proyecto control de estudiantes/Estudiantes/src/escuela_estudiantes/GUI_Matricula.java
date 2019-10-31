@@ -186,14 +186,14 @@ public class GUI_Matricula extends javax.swing.JInternalFrame {
     
         if(ctr.registrar_asignatura_x_estudiante(Integer.parseInt(jTextField_codigoasignatura.getText())))
         {
-        JOptionPane.showMessageDialog(this, "Se asigno la materia con exito"); 
+        JOptionPane.showMessageDialog(this, "Se asigno la asigantura con exito"); 
         }
         else
     {
-      JOptionPane.showMessageDialog(this, "La materia ya ha sido asignada");  
+      JOptionPane.showMessageDialog(this, "La asignatura ya ha sido asignada");  
     }
     
-        String[] columnas = {"Codigo estudiante","Materias"};
+        String[] columnas = {"CODIGO ALUMNO","ASIGNATURA"};
         tabla = ctr.datos_matricula(jTextField_dni.getText());
         DefaultTableModel datost = new DefaultTableModel(tabla,columnas);
         jTable1.setModel(datost);

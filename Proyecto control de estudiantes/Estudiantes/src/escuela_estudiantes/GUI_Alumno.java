@@ -246,7 +246,7 @@ public void limpiar()
         {
         if(est.ingresar_estudiante(carnet,doc,tipo,nom,ape,sex))
         {
-        JOptionPane.showMessageDialog(null,"Se registro el estudiante ","Mensaje",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Alumno registrado ","Mensaje",JOptionPane.INFORMATION_MESSAGE);
         limpiar();
         bloquear_cajas();
         }
@@ -257,7 +257,7 @@ public void limpiar()
         }
         else
         {
-          JOptionPane.showMessageDialog(this, "Digita los campos obligatorios");  
+          JOptionPane.showMessageDialog(this, "Rellena los campos obligatorios");  
         }
         
        

@@ -15,7 +15,7 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField_nommateria = new javax.swing.JTextField();
+        jTextField_nomasignatura = new javax.swing.JTextField();
         jButton_registrar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jComboBox_ih = new javax.swing.JComboBox();
@@ -25,10 +25,10 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
         setResizable(true);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Nombre materia");
+        jLabel1.setText("Asignatura");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Intensidad horaria");
+        jLabel2.setText("Horas asignatura");
 
         jButton_registrar.setText("Registrar");
         jButton_registrar.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +64,7 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
                             .addComponent(jLabel2))
                         .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField_nommateria, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField_nomasignatura, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox_ih, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -80,7 +80,7 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField_nommateria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_nomasignatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -96,7 +96,7 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
     public void limpiar()
     {
-       jTextField_nommateria.setText("");
+       jTextField_nomasignatura.setText("");
       
               
     }
@@ -110,12 +110,12 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
 
     private void jButton_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_registrarActionPerformed
     control_materia mate = new control_materia();
-    if(!jTextField_nommateria.equals("") && !jComboBox_ih.equals(""))
+    if(!jTextField_nomasignatura.equals("") && !jComboBox_ih.equals(""))
         {
-        if(mate.ingresar_materia(jTextField_nommateria.getText(), Integer.parseInt(jComboBox_ih.getSelectedItem().toString())))
+        if(mate.ingresar_materia(jTextField_nomasignatura.getText(), Integer.parseInt(jComboBox_ih.getSelectedItem().toString())))
             
         {
-        JOptionPane.showMessageDialog(null,"Se registro la materia ","Mensaje",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Asignatura registrada ","Mensaje",JOptionPane.INFORMATION_MESSAGE);
         limpiar();
        
         }
@@ -126,7 +126,7 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
         }
         else
         {
-          JOptionPane.showMessageDialog(this, "Digita los campos obligatorios");  
+          JOptionPane.showMessageDialog(this, "Rellena los campos obligatorios");  
         }
     }//GEN-LAST:event_jButton_registrarActionPerformed
 
@@ -136,6 +136,6 @@ public class GU_Asignatura extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox jComboBox_ih;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField_nommateria;
+    private javax.swing.JTextField jTextField_nomasignatura;
     // End of variables declaration//GEN-END:variables
 }

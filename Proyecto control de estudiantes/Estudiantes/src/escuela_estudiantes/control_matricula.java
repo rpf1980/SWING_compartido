@@ -22,7 +22,7 @@ public class control_matricula {
     public String inserta_nombre_estudiante()
      { 
        String result;
-       result = sen.datos_string("nombre", "select nombre from alumno where id_carnet='"+this.id_dni+"';");
+       result = sen.datos_string("nombre", "select nombre from alumno where id_dni='"+this.id_dni+"';");
        return result;
     }
     public String inserta_apellidos_estudiante()
