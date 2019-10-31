@@ -144,6 +144,7 @@ public class GUI_Nota extends javax.swing.JInternalFrame {
               // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    //Btn REGISTRAR
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
     String doc, mate;
     Double nota;
@@ -153,7 +154,7 @@ public class GUI_Nota extends javax.swing.JInternalFrame {
     nota = Double.parseDouble(jTextField_nota.getText());
     
     
-    if(!doc.equals("") && !mate.equals("") && nota>=0 && nota<=5)
+    if(!doc.equals("") && !mate.equals("") && nota>=0 && nota<=10)
         {
         if(cont.insertar_notas(doc, mate, nota))
         {

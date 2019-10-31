@@ -21,7 +21,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        idCalificaciones = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,15 +58,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jDesktopPane1.add(jButton3);
         jButton3.setBounds(130, 190, 150, 70);
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton4.setText("CALIFICACIONES");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        idCalificaciones.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        idCalificaciones.setText("CALIFICACIONES");
+        idCalificaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                idCalificacionesActionPerformed(evt);
             }
         });
-        jDesktopPane1.add(jButton4);
-        jButton4.setBounds(470, 190, 150, 70);
+        jDesktopPane1.add(idCalificaciones);
+        idCalificaciones.setBounds(470, 190, 150, 70);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,7 +100,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
     String est = JOptionPane.showInputDialog(this,"Nº DNI: ",JOptionPane.OK_OPTION);
-       if(ctr.existe_estudiante(est))
+       if(ctr.existe_alumno(est))
        {
         GUI_Matricula matric = new GUI_Matricula(ctr);
         jDesktopPane1.add(matric);
@@ -114,11 +114,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
        
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void idCalificacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idCalificacionesActionPerformed
     GUI_Nota nota = new GUI_Nota();
     jDesktopPane1.add(nota);
     nota.show();
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_idCalificacionesActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -154,10 +154,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton idCalificaciones;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JDesktopPane jDesktopPane1;
     // End of variables declaration//GEN-END:variables
 }

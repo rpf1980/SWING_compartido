@@ -6,6 +6,7 @@
 package dao.matricula;
 
 import java.util.ArrayList;
+import pojo.alumno.Alumno;
 import pojo.matricula.Matricula;
 
 /**
@@ -61,6 +62,21 @@ public class DAOmatriculas implements IDAOmatriculas
         return indice;
     }
 
+     public Matricula buscaMatriculaDNI(String dni)
+     {
+         Matricula a = new Matricula();
+                       
+        for(int i = 0; i < size(); i++)
+        {
+            a = this.listaMatriculas.get(i);
+            if(a.getDni().compareToIgnoreCase(dni) == 0)
+            {
+                return a;
+            }            
+        }
+        
+        return a;
+     }
     @Override
     public void modificaMatricula(String dni, String nombre, String apellidos, String curso, String fechaAlta, String fechaBaja)
     {
@@ -95,6 +111,23 @@ public class DAOmatriculas implements IDAOmatriculas
     public ArrayList getListaMatriculas()
     {
         return this.listaMatriculas;
+    }
+
+    private int size() {
+        return this.listaMatriculas.size();
+    }
+    
+    public String[] recuperaArrayMatriculas()
+    {
+        String[] strArray = new String[size()];
+        
+        for(int i = 0; i < size(); i++)
+        {
+            strArray[i] = this.listaMatriculas.get(i).getDni() + "   " +
+                          this.listaMatriculas.get(i).getNombre();
+        }
+        
+        return strArray;
     }
 
 }

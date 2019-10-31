@@ -68,9 +68,9 @@ public class DAOcalificaciones implements IDAOcalificaciones
     @Override
     public String[] recuperarArrayCalificacion()
     {
-        String[] strArray = new String[this.listaCalificaciones.size()];
+        String[] strArray = new String[size()];
         
-        for(int i = 0; i < this.listaCalificaciones.size(); i++)
+        for(int i = 0; i < size(); i++)
         {
             strArray[i] = this.listaCalificaciones.get(i).getNombreAlumno() + "  " +
                           this.listaCalificaciones.get(i).getApellidos() + "  " +
@@ -106,6 +106,7 @@ public class DAOcalificaciones implements IDAOcalificaciones
         for(int i = 0; i < size(); i++)
         {
             c = this.listaCalificaciones.get(i);
+            
             if(c.getApellidos().compareToIgnoreCase(apellidos) == 0)
             {
                 return c;
@@ -150,7 +151,7 @@ public class DAOcalificaciones implements IDAOcalificaciones
     }
 
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.listaCalificaciones.size();
     }
 
     

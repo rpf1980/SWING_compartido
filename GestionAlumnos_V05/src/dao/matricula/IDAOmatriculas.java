@@ -20,11 +20,15 @@ public interface IDAOmatriculas
     public void eliminaMatricula(Matricula matricula);
 
     public int buscaMatricula(Matricula matricula);
+     
+    public Matricula buscaMatriculaDNI(String dni);
 
     public void modificaMatricula(String dni, String nombre, String apellidos,
             String curso, String fechaAlta, String fechaBaja);
 
     public String muestraListaMatriculas();
+    
+    public String[] recuperaArrayMatriculas();
     
     public ArrayList getListaMatriculas();
     

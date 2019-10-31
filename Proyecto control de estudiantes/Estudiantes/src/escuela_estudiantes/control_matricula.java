@@ -51,7 +51,7 @@ public class control_matricula {
         return sen.poblar_combox(tabla, campo, "select "+campo+" from "+tabla+";");
      }
     
-    public boolean existe_estudiante( String cod)
+    public boolean existe_alumno( String cod)
      {
          
         this.id_dni = cod;

@@ -38,7 +38,6 @@ public class DAOAlumno implements IDAOAlumno
     @Override
     public void insertaAlumno(Alumno alumno)
     {
-        System.out.println(alumno);
         this.getListaAlumnos().add(alumno);
     }
 

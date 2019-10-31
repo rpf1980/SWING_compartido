@@ -30,6 +30,8 @@ public class JF_datosModificarCalificacion extends javax.swing.JFrame {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+   
+    
     //En esta función le daremos un valor a cada uno de los campos de la vista
     public void setDatosCalificacion()
     {       

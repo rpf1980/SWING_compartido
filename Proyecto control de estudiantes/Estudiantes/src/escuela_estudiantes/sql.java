@@ -19,8 +19,9 @@ public class sql {
        try {
             ps = con.conectado().prepareStatement(insert);
             for(int i=0; i<=datos.length-1;i++){
-                ps.setString(i+1, datos[i]);
+                ps.setString(i+1, datos[i]);            
             }
+            System.out.println(ps);
             ps.execute();
             ps.close();
             estado = true;
@@ -111,8 +112,10 @@ public class sql {
      
      public boolean existe(String campo, String from_where){
      int registros = 0;
+     String cons = "SELECT count(*) as total  " + from_where;
+    
      try{
-         ps = con.conectado().prepareStatement("SELECT count("+campo+") as total  " + from_where);
+         ps = con.conectado().prepareStatement(cons);
          res = ps.executeQuery();
          res.next();
          registros = res.getInt("total");

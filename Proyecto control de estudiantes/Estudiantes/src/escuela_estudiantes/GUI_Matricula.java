@@ -16,7 +16,7 @@ public class GUI_Matricula extends javax.swing.JInternalFrame {
         jTextField_apellidos.setText(ctr.inserta_apellidos_estudiante());
         jTextField_dni.setText(ctr.inserta_carnet_estudiante());
         
-        Object[] idmateria = ctr.combox("materia","nombre_materia");
+        Object[] idmateria = ctr.combox("asignatura","nombre_asignatura");
         jComboBox_asignaturas.removeAllItems();
         for(int i=0;i<idmateria.length;i++)
         {
@@ -44,7 +44,7 @@ public class GUI_Matricula extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
-        jComboBox_asignaturas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox_asignaturas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " " }));
         jComboBox_asignaturas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox_asignaturasActionPerformed(evt);

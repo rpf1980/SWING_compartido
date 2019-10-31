@@ -1,0 +1,2 @@
+102 MenuPrincipal ( btn MATRÍCULA )
+ - No reconoce alumno mediante el DNI que se ingresa en el JOptionPane

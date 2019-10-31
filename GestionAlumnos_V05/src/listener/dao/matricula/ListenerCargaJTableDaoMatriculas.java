@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 public class ListenerCargaJTableDaoMatriculas
 {
 
-    public static void cargaEnJTableDaoAlumnos(JTable jtable)
+    public static void cargaEnJTableDaoMatriculas(JTable jtable)
     {
         //Instanciamos DAOmatriculas para que el constructor
         //nos cree las matrículas del DAO        
